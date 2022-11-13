@@ -1,0 +1,86 @@
+.body {
+  background-color: hsl(33deg, 100%, 98%);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr 0.45fr;
+  padding: 1.5rem;
+}
+.body__title {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 1rem;
+}
+.body__bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: end;
+}
+
+.bar {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.bar__body {
+  background-color: hsl(10deg, 79%, 65%);
+  width: 75%;
+  justify-self: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+.bar__price {
+  text-align: center;
+  font-size: 1rem;
+  position: absolute;
+  color: #fff;
+  background-color: hsl(25deg, 47%, 15%);
+  width: 150%;
+  height: 2rem;
+  line-height: 2rem;
+  transform: translateY(-2.4rem);
+  font-weight: 700;
+  border-radius: 5px;
+  display: none;
+}
+.bar__day {
+  text-align: center;
+  font-size: 0.8rem;
+  color: hsl(28deg, 10%, 53%);
+}
+
+.footer {
+  border-top: 2px solid hsl(27deg, 66%, 92%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "total ." "price porcentage";
+  color: hsl(25deg, 47%, 15%);
+}
+.footer__text {
+  grid-area: total;
+  align-self: end;
+  color: hsl(28deg, 10%, 53%);
+  font-size: 1rem;
+}
+.footer__text--porcentage {
+  font-weight: 700;
+  color: hsl(25deg, 47%, 15%);
+}
+.footer__total-price {
+  grid-area: price;
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: end;
+}
+.footer__percentage {
+  grid-area: porcentage;
+  text-align: end;
+  align-self: end;
+}
+
+/*# sourceMappingURL=body.css.map */

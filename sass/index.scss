@@ -1,0 +1,56 @@
+@use 'normalize';
+@use 'variableGlobal';
+@use 'mixins-functions';
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: variableGlobal.$cream;
+    @include mixins-functions.center-flex;
+}
+
+.card{
+    @include mixins-functions.w-h(28rem, 30rem);
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+    gap: 1.5rem;
+}
+
+.header{
+    padding: 1.15rem 1.8rem;
+    color: variableGlobal.$very-pale-orange;
+    background-color: variableGlobal.$soft-red;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .8fr 1fr;
+    grid-template-areas: 
+    'balance logo'
+    'price logo';
+
+    &__text{
+        grid-area: balance;
+        font-weight: 400;
+        font-size: .8rem;
+    }
+
+    &__price{
+        grid-area: price;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    &__logo{
+        grid-area: logo;
+        align-self: center;
+        margin-left: auto;
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .card{
+        width: 90%;        
+    }
+}
+

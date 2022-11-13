@@ -1,0 +1,100 @@
+@use 'variableGlobal';
+
+.body{
+    background-color: variableGlobal.$very-pale-orange;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: .2fr .8fr .45fr;
+    padding: 1.5rem;
+    
+    &__title{
+        color: variableGlobal.$dark-brown;
+        font-size: 1rem;
+    }
+
+
+    &__bars{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: end;
+    }
+}
+
+.bar{
+    display: grid;
+    grid-template-rows: 1fr .1fr;
+    padding-top: 1rem;
+    margin-bottom: .5rem;
+
+    &__body{
+        background-color: variableGlobal.$soft-red;
+        width: 75%;
+        justify-self: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 110px;
+        cursor: pointer;
+        border-radius: .2rem;
+    }
+
+    &__price{
+        text-align: center;
+        font-size: 1rem;
+        position: absolute;
+        color: #fff;
+        background-color: variableGlobal.$dark-brown;
+        width: 150%;
+        height: 2rem;
+        line-height: 2rem;
+        transform: translateY(-2.4rem);
+        font-weight: 700;
+        border-radius: 5px;
+        display: none;
+    }
+
+    &__day{
+        text-align: center;
+        font-size: .8rem;
+        color: variableGlobal.$medium-brown;
+    }
+
+}
+
+.footer{
+    border-top: 2px solid variableGlobal.$cream;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'total .'
+    'price porcentage';
+    color: variableGlobal.$dark-brown;
+
+    &__text{
+        grid-area: total;
+        align-self: end;
+        color: variableGlobal.$medium-brown;
+        font-size: 1rem;
+
+        &--porcentage{
+            font-weight: 700;
+            color: variableGlobal.$dark-brown;
+        }
+    }
+
+    &__total-price{
+        grid-area: price;
+        font-size: 2rem;
+        font-weight: 700;
+        align-self: end;
+    }
+
+    &__percentage{
+        grid-area: porcentage;
+        text-align: end;
+        align-self: end;
+    }
+
+}
