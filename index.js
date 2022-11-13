@@ -7,7 +7,7 @@ lista.map((value)=>{
     barras.innerHTML += `
     <div class="bar">
         <div class="bar__body">
-            <label for="" class="bar__price">$${value.amount}</label>
+            <label for="price" class="bar__price">$${value.amount}</label>
         </div>
         <p class="bar__day">${value.day}</p>
     </div>
