@@ -9,5 +9,5 @@
 ![Design desktop preview](./design/desktop.png)
 
 ---
-## Movile
+## Mobile
 ![Design desktop preview](./design/mobile.png)
